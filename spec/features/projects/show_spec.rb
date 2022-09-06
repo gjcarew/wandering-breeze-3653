@@ -25,6 +25,7 @@ RSpec.describe 'Project show page' do
       ContestantProject.create(contestant_id: kentaro.id, project_id: boardfit.id)
       ContestantProject.create(contestant_id: erin.id, project_id: boardfit.id)
     end
+    
     it 'I see that projects name, material, and theme' do
       visit "/projects/#{@lit_fit.id}"
       expect(page).to have_content("Litfit")
