@@ -7,4 +7,8 @@ class Project < ApplicationRecord
   def theme
     self.challenge.theme
   end
+
+  def avg_contestant_exp
+    self.contestants.average(:years_of_experience)
+  end
 end
